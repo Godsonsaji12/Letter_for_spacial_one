@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope" id="myButton">
+                <div class="letter">
+                    <div class="text">
+                        <strong>I want to tell you something 💖</strong>
+                        <video id="myVideo"
+                         src="video_2024-01-26_13-44-11.mp4" type="video/mp4" loop ></video>
+                    </div>
+                </div>
+            </div>
+            <div class="heart" 
+            id="myButton2"
+            onclick="playVideo()"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+            document.querySelector("#myButton").addEventListener("click", () => {
+                document.querySelector("#myVideo").play();
+            });
+
+            document.querySelector("#myButton2").addEventListener("click", () => {
+                document.querySelector("#myVideo").play();
+            });
+    </script>
+</body>
+</html>
